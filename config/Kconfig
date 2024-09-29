@@ -8,3 +8,5 @@ config BOARD_CORNE_LEFT
 
 config BOARD_CORNE_RIGHT
     bool
+
+CONFIG_ZMK_PM_SOFT_OFF=y
