@@ -58,11 +58,6 @@
 		tap-ms = <10>;
 	};
 
-	soft_off {
-		hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
-	};
-
-    
     keymap {
         compatible = "zmk,keymap";
 
@@ -82,14 +77,14 @@
         setting0 {
             display-name = "SETTING";
             bindings = <
-&rgb_ug RGB_TOG  &soft_off     &none         &none                 &none                   &none            &mmv MOVE_UP      &none                 &none                   &none 	&rgb_ug RGB_TOG  &soft_off     &none         
+&rgb_ug RGB_TOG  &soft_off     &none         &none                 &none                   &none            &mmv MOVE_UP      &none                 &none                   &none 	&none  &soft_off     &rgb_ug RGB_TOG
 
 &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &none                 &none                   &kp LS(ENTER)    &mmv MOVE_DOWN    &none                 &none                   &kp LS(ENTER)    &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2
 
 &tog 0           &tog 7         &to 0         &kp LA(LC(UP_ARROW))  &kp LA(LC(DOWN_ARROW))  &kp LA(LC(V))    &mmv MOVE_LEFT    &kp LA(LC(UP_ARROW))  &kp LA(LC(DOWN_ARROW))  &kp LA(LC(V))   &tog 0           &tog 7         &to 0
 
                  &soft_off   &none &none  &mo 6    &mmv MOVE_RIGHT &mo 6 &none  &none
-				 &mkp LCLK
+				 &sys_reset
             >;
             label = "SETTING";
             sensor-bindings = <&rgb_encoder>;
@@ -155,11 +150,11 @@
         setting1 {
             display-name = "SETTING_H";
             bindings = <
-&soft_off  &bootloader  &none   &none   &none   &none     &mmv MOVE_UP      &bt BT_CLR_ALL   &none            &none   &none    &bootloader  &soft_off
-&kp F1     &kp F2       &kp F3  &kp F4  &kp F5  &kp F6    &mmv MOVE_DOWN    &kp F7           &kp F8           &kp F9  &kp F10  &kp F11      &kp F12
-&tog 0     &to 0        &to 1   &none   &none   &none     &mmv MOVE_LEFT    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &none   &none    &none        &none
-          &soft_off   &none &none  &none           		  &mmv MOVE_RIGHT &none &none  &none
-                                                &mkp LCLK
+&soft_off  &bootloader  &sys_reset  &none   &none   &none     &mmv MOVE_UP      &bt BT_CLR_ALL   &none            &none   &sys_reset  &bootloader  &soft_off
+&kp F1     &kp F2       &kp F3      &kp F4  &kp F5  &kp F6    &mmv MOVE_DOWN    &kp F7           &kp F8           &kp F9  &kp F10     &kp F11      &kp F12
+&tog 0     &to 0        &to 1       &none   &none   &none     &mmv MOVE_LEFT    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &none   &none       &none        &none
+           &soft_off   &none &none  &none                     &mmv MOVE_RIGHT &none &none  &none
+                                                &none
             >;
             label = "SETTING";
             sensor-bindings = <&rgb_encoder>;
@@ -169,10 +164,10 @@
         pad {
             display-name = "PAD";
 		    bindings = <
-&none  &none  &none  &none  &none  &none    &kp UP_ARROW       &kp ESC    &kp Q  &kp W  &kp E  &kp R  &kp T
-&none  &none  &none  &none  &none  &none    &kp DOWN_ARROW     &kp ENTER  &kp A  &kp S  &kp D  &kp F  &mo 8
-&none  &none  &none  &none  &none  &none    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X  &kp C  &kp V  &kp B
-       &soft_off    &none  &none  &tog 7    &kp RIGHT_ARROW    &kp ENTER  &none  &none
+&kp Z  &kp P  &kp Q  &kp W  &kp E  &kp ESC      &kp UP_ARROW       &kp ESC    &kp Q  &kp W  &kp E  &kp R  &kp T
+&mo 8  &kp F  &kp A  &kp S  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &kp S  &kp D  &kp F  &mo 8
+&kp B  &kp V  &kp Z  &kp X  &kp C  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X  &kp C  &kp V  &kp B
+       &soft_off    &none  &none  &tog 7        &kp RIGHT_ARROW    &kp ENTER  &none  &none
                                             &none
             >;
             label = "PAD";
@@ -182,10 +177,10 @@
         pad_setting {
             display-name = "PAD_S";
 		    bindings = <
-&none  &none  &none  &none  &none  &none    &kp UP_ARROW       &kp ESC    &kp Q  &kp W   &kp E  &kp K_VOLUME_UP    &kp T
-&none  &none  &none  &none  &none  &none    &kp DOWN_ARROW     &kp ENTER  &kp A  &tog 7  &kp D  &kp K_VOLUME_DOWN  &none
-&none  &none  &none  &none  &none  &none    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X   &kp C  &kp V  &kp B
-       &soft_off    &none  &none  &tog 7    &kp RIGHT_ARROW    &kp ENTER  &none  &none
+&kp Z  &kp K_VOLUME_UP    &kp Q  &kp W   &kp E  &kp ESC      &kp UP_ARROW       &kp ESC    &kp Q  &kp W   &kp E  &kp K_VOLUME_UP    &kp T
+&mo 8  &kp K_VOLUME_DOWN  &kp A  &tog 7  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &tog 7  &kp D  &kp K_VOLUME_DOWN  &none
+&kp B  &kp V              &kp Z  &kp X   &kp C  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X   &kp C  &kp V  &kp B
+       &soft_off    &none  &none  &tog 7                     &kp RIGHT_ARROW    &kp ENTER  &none  &none
                                             &none
             >;
             label = "PAD_SETTING";
