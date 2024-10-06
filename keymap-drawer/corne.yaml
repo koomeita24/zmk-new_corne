@@ -60,9 +60,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB TOG
-  - '&soft_off'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&soft_off'
+  - RGB TOG
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
@@ -97,7 +97,7 @@ layers:
   - {t: setting1, type: held alternate}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   m2:
   - m5
   - '&td0'
@@ -297,7 +297,7 @@ layers:
   setting1:
   - '&soft_off'
   - $$mdi:progress-download$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -305,7 +305,7 @@ layers:
   - BT CLR ALL
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - $$mdi:progress-download$$
   - '&soft_off'
   - F1
@@ -342,14 +342,14 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   pad:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Z
+  - P
+  - Q
+  - W
+  - E
+  - $$mdi:keyboard-esc$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:keyboard-esc$$
   - Q
@@ -357,12 +357,12 @@ layers:
   - E
   - R
   - T
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - pad_setting
+  - F
+  - A
+  - S
+  - D
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-down-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - A
@@ -370,12 +370,12 @@ layers:
   - D
   - F
   - pad_setting
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - B
+  - V
+  - Z
+  - X
+  - C
+  - $$mdi:keyboard-space$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:keyboard-space$$
   - Z
@@ -393,12 +393,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   pad_setting:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Z
+  - VOLUME UP
+  - Q
+  - W
+  - E
+  - $$mdi:keyboard-esc$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:keyboard-esc$$
   - Q
@@ -406,25 +406,25 @@ layers:
   - E
   - VOLUME UP
   - T
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: pad_setting, type: held}
+  - VOLUME DOWN
+  - A
+  - {t: pad, h: toggle}
+  - D
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-down-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - A
   - {t: pad, h: toggle}
   - D
   - VOLUME DOWN
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - B
+  - V
+  - Z
+  - X
+  - C
+  - $$mdi:keyboard-space$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:keyboard-space$$
   - Z
