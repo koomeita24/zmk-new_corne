@@ -22,6 +22,8 @@
 #define PAD          7
 #define PAD_SETTING  8
 #define M9           9
+#define M9_LS        10
+#define M9_RS        11
 
 / {
     behaviors {
@@ -74,10 +76,10 @@
         m1 {
             display-name = "M1";
 		    bindings = <
-&mo 5  &td0   &kp A  &kp U  &kp I  &kp O    &kp UP_ARROW       &kp A  &kp U  &kp I  &kp O  &td0   &mo 5
-&mo 3  &mo 2  &kp H  &kp S  &kp D  &kp L    &kp DOWN_ARROW     &kp H  &kp S  &kp D  &kp L  &mo 2  &mo 3
-&mo 4  &kp V  &kp E  &kp N  &kp C  &kp T    &kp LEFT_ARROW     &kp E  &kp N  &kp C  &kp T  &kp V  &mo 4
-       &soft_off    &none  &none  &mo 1     &kp RIGHT_ARROW    &mo 1  &none  &none
+&mo M5  &td0   &kp A  &kp U  &kp I  &kp O    &kp UP_ARROW       &kp A  &kp U  &kp I  &kp O  &td0   &mo M5
+&mo M3  &mo M2  &kp H  &kp S  &kp D  &kp L    &kp DOWN_ARROW     &kp H  &kp S  &kp D  &kp L  &mo M2  &mo M3
+&mo M4  &kp V  &kp E  &kp N  &kp C  &kp T    &kp LEFT_ARROW     &kp E  &kp N  &kp C  &kp T  &kp V  &mo M4
+       &soft_off    &none  &none  &mo SETTING     &kp RIGHT_ARROW    &mo SETTING  &none  &none
                                             &none
             >;
             label = "M1";
@@ -91,9 +93,9 @@
 
 &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &none                 &none                   &kp LS(ENTER)    &mmv MOVE_DOWN    &none                 &none                   &kp LS(ENTER)    &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2
 
-&tog 0           &tog 7         &tog 9         &kp LA(LC(UP_ARROW))  &kp LA(LC(DOWN_ARROW))  &kp LA(LC(V))    &mmv MOVE_LEFT    &kp LA(LC(UP_ARROW))  &kp LA(LC(DOWN_ARROW))  &kp LA(LC(V))   &tog 0           &tog 7         &tog 9
+&none           &tog PAD         &tog M9         &kp LA(LC(UP_ARROW))  &kp LA(LC(DOWN_ARROW))  &kp LA(LC(V))    &mmv MOVE_LEFT    &kp LA(LC(UP_ARROW))  &kp LA(LC(DOWN_ARROW))  &kp LA(LC(V))   &none           &tog PAD         &tog M9
 
-                 &soft_off   &none &none  &mo 6    &mmv MOVE_RIGHT &mo 6 &none  &none
+                 &soft_off   &none &none  &mo SETTING_H    &mmv MOVE_RIGHT &mo SETTING_H &none  &none
 				 &sys_reset
             >;
             label = "SETTING";
@@ -105,10 +107,10 @@
         m2 {
             display-name = "M2";
             bindings = <
-&mo 5  &td0   &kp Q  &kp W  &kp R  &kp P    &kp UP_ARROW     &kp Q  &kp W  &kp R  &kp P  &td0   &mo 5
-&mo 3  &none  &kp Y  &kp J  &kp K  &kp F    &kp DOWN_ARROW   &kp Y  &kp J  &kp K  &kp F  &mo 2  &mo 3
-&mo 4  &kp G  &kp B  &kp X  &kp M  &kp Z    &kp LEFT_ARROW   &kp B  &kp X  &kp M  &kp Z  &kp G  &mo 4
-       &soft_off    &none  &none  &mo 1     &kp RIGHT_ARROW  &mo 1  &none  &none
+&mo M5  &td0   &kp Q  &kp W  &kp R  &kp P    &kp UP_ARROW     &kp Q  &kp W  &kp R  &kp P  &td0   &mo M5
+&mo M3  &none  &kp Y  &kp J  &kp K  &kp F    &kp DOWN_ARROW   &kp Y  &kp J  &kp K  &kp F  &none  &mo M3
+&mo M4  &kp G  &kp B  &kp X  &kp M  &kp Z    &kp LEFT_ARROW   &kp B  &kp X  &kp M  &kp Z  &kp G  &mo M4
+       &soft_off    &none  &none  &mo SETTING     &kp RIGHT_ARROW  &mo SETTING  &none  &none
 	   &none
             >;
             label = "M2";
@@ -121,7 +123,7 @@
 &kp GRAVE  &kp BSPC   &kp MINUS   &kp EQUAL  &kp SLASH       &none    &kp UP_ARROW       &none  &kp GRAVE       &kp MINUS  &kp EQUAL   &kp BSPC   &kp SLASH
 &none      &kp ESC    &kp SPACE   &kp ENTER  &kp TAB  		 &none    &kp DOWN_ARROW     &none  &kp TAB         &kp ESC    &kp SPACE   &kp ENTER  &none
 &td0       &kp COMMA  &kp PERIOD  &kp SEMI   &kp APOSTROPHE  &none    &kp LEFT_ARROW     &none  &kp APOSTROPHE  &kp COMMA  &kp PERIOD  &kp SEMI   &td0
-           &soft_off    &none  &none  &mo 1     					  &kp RIGHT_ARROW    &mo 1  &none  &none
+           &soft_off    &none  &none  &mo SETTING     					  &kp RIGHT_ARROW    &mo SETTING  &none  &none
            &none
             >;
             label = "M3";
@@ -134,7 +136,7 @@
 &kp BACKSLASH  &kp N7  &kp N8  &kp N9  &kp LEFT_BRACKET   &none    &kp UP_ARROW       &none  &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9  &kp BACKSLASH
 &td0           &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET  &none    &kp DOWN_ARROW     &none  &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp N6  &td0
 &none          &kp N1  &kp N2  &kp N3  &kp N0             &none    &kp LEFT_ARROW     &none  &kp N0             &kp N1  &kp N2  &kp N3  &none
-               &soft_off    &none  &none  &mo 1                    &kp RIGHT_ARROW    &mo 1  &none  &none
+               &soft_off    &none  &none  &mo SETTING                    &kp RIGHT_ARROW    &mo SETTING  &none  &none
                &none
             >;
             label = "M4";
@@ -150,7 +152,7 @@
 
 &kp LS(ENTER)  &kp K_BACK      &kp LC(V)       &kp LC(C)  		&none      &none    &kp LEFT_ARROW     &none  &none      &kp LC(C)       &kp LC(V)       &kp K_BACK       &kp LS(ENTER)
 
-               &soft_off    &none  &none  &mo 1                                     &kp RIGHT_ARROW    &mo 1  &none  &none
+               &soft_off    &none  &none  &mo SETTING                                     &kp RIGHT_ARROW    &mo SETTING  &none  &none
                &none
             >;
             label = "M5";
@@ -162,7 +164,7 @@
             bindings = <
 &soft_off  &bootloader  &sys_reset  &none   &none   &none     &mmv MOVE_UP      &bt BT_CLR_ALL   &none            &none   &sys_reset  &bootloader  &soft_off
 &kp F1     &kp F2       &kp F3      &kp F4  &kp F5  &kp F6    &mmv MOVE_DOWN    &kp F7           &kp F8           &kp F9  &kp F10     &kp F11      &kp F12
-&tog 0     &to 0        &to 1       &none   &none   &none     &mmv MOVE_LEFT    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &none   &none       &none        &none
+&none     &tog PAD        &tog M9       &none   &none   &none     &mmv MOVE_LEFT    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &none   &none       &none        &none
            &soft_off   &none &none  &none                     &mmv MOVE_RIGHT &none &none  &none
                                                 &none
             >;
@@ -175,9 +177,9 @@
             display-name = "PAD";
 		    bindings = <
 &kp Z  &kp P  &kp Q  &kp W  &kp E  &kp ESC      &kp UP_ARROW       &kp ESC    &kp Q  &kp W  &kp E  &kp R  &kp T
-&mo 8  &kp F  &kp A  &kp S  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &kp S  &kp D  &kp F  &mo 8
+&mo PAD_SETTING  &kp F  &kp A  &kp S  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &kp S  &kp D  &kp F  &mo PAD_SETTING
 &kp B  &kp V  &kp Z  &kp X  &kp C  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X  &kp C  &kp V  &kp B
-       &soft_off    &none  &none  &tog 7        &kp RIGHT_ARROW    &kp ENTER  &none  &none
+       &soft_off    &none  &none  &kp ENTER        &kp RIGHT_ARROW    &kp ENTER  &none  &none
                                             &none
             >;
             label = "PAD";
@@ -188,9 +190,9 @@
             display-name = "PAD_SETTING";
 		    bindings = <
 &kp Z  &kp K_VOLUME_UP    &kp Q  &kp W   &kp E  &kp ESC      &kp UP_ARROW       &kp ESC    &kp Q  &kp W   &kp E  &kp K_VOLUME_UP    &kp T
-&mo 8  &kp K_VOLUME_DOWN  &kp A  &tog 7  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &tog 7  &kp D  &kp K_VOLUME_DOWN  &none
+&none  &kp K_VOLUME_DOWN  &kp A  &tog PAD  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &tog PAD  &kp D  &kp K_VOLUME_DOWN  &none
 &kp B  &kp V              &kp Z  &kp X   &kp C  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X   &kp C  &kp V  &kp B
-       &soft_off    &none  &none  &tog 7                     &kp RIGHT_ARROW    &kp ENTER  &none  &none
+       &soft_off    &none  &none  &tog PAD                     &kp RIGHT_ARROW    &kp ENTER  &none  &none
                                             &none
             >;
             label = "PAD_SETTING";
@@ -201,15 +203,37 @@
             display-name = "M9";
 		    bindings = <
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T        &kp UP_ARROW       &kp Y      &kp U  &kp I  &kp O  &kp P      &kp BSPC
-&kp ESC  &kp A  &kp S  &kp D  &kp F  &kp G        &kp DOWN_ARROW     &kp H      &kp J  &kp K  &kp L  &kp ENTER  &mo 3
-&td0     &kp Z  &kp X  &kp C  &kp V  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp B  &kp N  &kp M  &td0       &kp LCTRL
-         &soft_off    &none  &none  &mo 1         &kp RIGHT_ARROW    &mo 1  &none  &none
+&kp ESC  &kp A  &kp S  &kp D  &kp F  &kp G        &kp DOWN_ARROW     &kp H      &kp J  &kp K  &kp L  &kp ENTER  &mo M3
+&mo M9_LS     &kp Z  &kp X  &kp C  &kp V  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp B  &kp N  &kp M  &kp LCTRL  &mo M9_RS       
+         &soft_off    &none  &none  &mo SETTING         &kp RIGHT_ARROW    &mo SETTING  &none  &none
                                                   &none
             >;
-            label = "M9";
 			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
+        m9_ls {
+            display-name = "M9_LS";
+		    bindings = <
+&kp BACKSLASH  &kp N7  &kp N8  &kp N9  &kp LEFT_BRACKET   &none        &kp UP_ARROW       &kp LS(Y)      &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)      &kp LS(BSPC)
+&kp LSHIFT           &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET  &none        &kp DOWN_ARROW     &kp LS(H)      &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp LS(ENTER)  &mo M3
+&none          &kp N1  &kp N2  &kp N3  &kp N0             &none        &kp LEFT_ARROW     &kp LS(SPACE)  &kp LS(B)  &kp LS(N)  &kp LS(M)  &kp LCTRL &kp LALT
+         &soft_off    &none  &none  &mo SETTING   &kp RIGHT_ARROW    &mo SETTING  &none  &none
+                                                  &none
+            >;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
+        };
+
+        m9_rs {
+            display-name = "M9_RS";
+		    bindings = <
+&kp LS(TAB)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)        &kp UP_ARROW       &none  &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9  &kp BACKSLASH
+&kp LS(ESC)  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)        &kp DOWN_ARROW     &none  &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp N6  &kp LSHIFT
+&kp LALT     &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(SPACE)    &kp LEFT_ARROW     &none  &kp N0             &kp N1  &kp N2  &kp N3  &none
+         &soft_off    &none  &none  &mo SETTING   &kp RIGHT_ARROW    &mo SETTING  &none  &none
+                                                  &none
+            >;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
+        };
 
 
     };
