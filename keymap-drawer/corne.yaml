@@ -76,9 +76,9 @@ layers:
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {t: m1, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: pad, h: toggle}
-  - {t: m9, h: toggle}
+  - {t: M9, h: toggle}
   - Alt+Ctl+ $$mdi:arrow-up-bold$$
   - Alt+Ctl+ $$mdi:arrow-down-bold$$
   - Alt+Ctl+ V
@@ -86,9 +86,9 @@ layers:
   - Alt+Ctl+ $$mdi:arrow-up-bold$$
   - Alt+Ctl+ $$mdi:arrow-down-bold$$
   - Alt+Ctl+ V
-  - {t: m1, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: pad, h: toggle}
-  - {t: m9, h: toggle}
+  - {t: M9, h: toggle}
   - '&soft_off'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -123,7 +123,7 @@ layers:
   - J
   - K
   - F
-  - {t: m2, type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - m3
   - m4
   - G
@@ -321,9 +321,9 @@ layers:
   - F10
   - F11
   - F12
-  - {t: m1, h: toggle}
-  - {t: m1, h: toggle}
-  - {t: setting, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: pad, h: toggle}
+  - {t: M9, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -386,7 +386,7 @@ layers:
   - '&soft_off'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: pad, h: toggle}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -406,7 +406,7 @@ layers:
   - E
   - VOLUME UP
   - T
-  - {t: pad_setting, type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - VOLUME DOWN
   - A
   - {t: pad, h: toggle}
@@ -441,7 +441,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  m9:
+  M9:
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -468,7 +468,7 @@ layers:
   - L
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - m3
-  - '&td0'
+  - M9_LS
   - Z
   - X
   - C
@@ -479,8 +479,106 @@ layers:
   - B
   - N
   - M
-  - '&td0'
   - $$mdi:apple-keyboard-control$$
+  - M9_RS
+  - '&soft_off'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - setting
+  - $$mdi:arrow-right-bold$$
+  - setting
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  M9_LS:
+  - {t: \, s: '|'}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '[', s: '{'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-up-bold$$
+  - Sft+ Y
+  - Sft+ U
+  - Sft+ I
+  - Sft+ O
+  - Sft+ P
+  - {t: 'Sft+ $$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: ']', s: '}'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-down-bold$$
+  - Sft+ H
+  - Sft+ J
+  - Sft+ K
+  - Sft+ L
+  - {t: 'Sft+ $$mdi:keyboard-return$$', type: enter}
+  - m3
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '0', s: )}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-left-bold$$
+  - Sft+ $$mdi:keyboard-space$$
+  - Sft+ B
+  - Sft+ N
+  - Sft+ M
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - '&soft_off'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - setting
+  - $$mdi:arrow-right-bold$$
+  - setting
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  M9_RS:
+  - $$mdi:keyboard-tab-reverse$$
+  - Sft+ Q
+  - Sft+ W
+  - Sft+ E
+  - Sft+ R
+  - Sft+ T
+  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '[', s: '{'}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: \, s: '|'}
+  - Sft+ $$mdi:keyboard-esc$$
+  - Sft+ A
+  - Sft+ S
+  - Sft+ D
+  - Sft+ F
+  - Sft+ G
+  - $$mdi:arrow-down-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: ']', s: '}'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-option$$
+  - Sft+ Z
+  - Sft+ X
+  - Sft+ C
+  - Sft+ V
+  - Sft+ $$mdi:keyboard-space$$
+  - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '0', s: )}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - '&soft_off'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
