@@ -29,7 +29,6 @@
     behaviors {
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD0";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
@@ -49,7 +48,6 @@
 
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
-        label = "RGB_ENCODER";
         #sensor-binding-cells = <0>;
         bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
@@ -82,14 +80,13 @@
        &soft_off    &none  &none  &mo SETTING     &kp RIGHT_ARROW    &mo SETTING  &none  &none
                                             &none
             >;
-            label = "M1";
 			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         setting {
             display-name = "SETTING";
             bindings = <
-&rgb_ug RGB_TOG  &soft_off     &none         &none                 &none                   &none            &mmv MOVE_UP      &none                 &none                   &none 	&none  &soft_off     &rgb_ug RGB_TOG
+&rgb_ug RGB_TOG  &soft_off     &sys_reset         &none                 &none                   &none            &mmv MOVE_UP      &none                 &none                   &none 	&sys_reset  &soft_off     &rgb_ug RGB_TOG
 
 &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &none                 &none                   &kp LS(ENTER)    &mmv MOVE_DOWN    &none                 &none                   &kp LS(ENTER)    &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2
 
@@ -98,7 +95,6 @@
                  &soft_off   &none &none  &mo SETTING_H    &mmv MOVE_RIGHT &mo SETTING_H &none  &none
 				 &sys_reset
             >;
-            label = "SETTING";
             sensor-bindings = <&rgb_encoder>;
             //sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
         };
@@ -113,7 +109,6 @@
        &soft_off    &none  &none  &mo SETTING     &kp RIGHT_ARROW  &mo SETTING  &none  &none
 	   &none
             >;
-            label = "M2";
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -126,7 +121,6 @@
            &soft_off    &none  &none  &mo SETTING     					  &kp RIGHT_ARROW    &mo SETTING  &none  &none
            &none
             >;
-            label = "M3";
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -139,7 +133,6 @@
                &soft_off    &none  &none  &mo SETTING                    &kp RIGHT_ARROW    &mo SETTING  &none  &none
                &none
             >;
-            label = "M4";
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -155,7 +148,6 @@
                &soft_off    &none  &none  &mo SETTING                                     &kp RIGHT_ARROW    &mo SETTING  &none  &none
                &none
             >;
-            label = "M5";
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -168,7 +160,6 @@
            &soft_off   &none &none  &none                     &mmv MOVE_RIGHT &none &none  &none
                                                 &none
             >;
-            label = "SETTING_H";
             sensor-bindings = <&rgb_encoder>;
             //sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
         };
@@ -182,7 +173,6 @@
        &soft_off    &none  &none  &kp ENTER        &kp RIGHT_ARROW    &kp ENTER  &none  &none
                                             &none
             >;
-            label = "PAD";
 			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
@@ -195,7 +185,6 @@
        &soft_off    &none  &none  &tog PAD                     &kp RIGHT_ARROW    &kp ENTER  &none  &none
                                             &none
             >;
-            label = "PAD_SETTING";
 			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
