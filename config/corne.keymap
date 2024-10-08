@@ -19,11 +19,11 @@
 #define M4           4
 #define M5           5
 #define SETTING_H    6
-#define PAD          7
-#define PAD_SETTING  8
-#define M9           9
-#define M9_LS        10
-#define M9_RS        11
+#define PAD          10
+#define PAD_SETTING  11
+#define M9           7
+#define M9_LS        8
+#define M9_RS        9
 
 / {
     behaviors {
@@ -162,30 +162,6 @@
             >;
             sensor-bindings = <&rgb_encoder>;
             //sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
-        };
-
-        pad {
-            display-name = "PAD";
-		    bindings = <
-&kp Z  &kp P  &kp Q  &kp W  &kp E  &kp ESC      &kp UP_ARROW       &kp ESC    &kp Q  &kp W  &kp E  &kp R  &kp T
-&mo PAD_SETTING  &kp F  &kp A  &kp S  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &kp S  &kp D  &kp F  &mo PAD_SETTING
-&kp B  &kp V  &kp Z  &kp X  &kp C  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X  &kp C  &kp V  &kp B
-       &soft_off    &none  &none  &kp ENTER        &kp RIGHT_ARROW    &kp ENTER  &none  &none
-                                            &none
-            >;
-			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
-        };
-
-        pad_setting {
-            display-name = "PAD_SETTING";
-		    bindings = <
-&kp Z  &kp K_VOLUME_UP    &kp Q  &kp W   &kp E  &kp ESC      &kp UP_ARROW       &kp ESC    &kp Q  &kp W   &kp E  &kp K_VOLUME_UP    &kp T
-&none  &kp K_VOLUME_DOWN  &kp A  &tog PAD  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &tog PAD  &kp D  &kp K_VOLUME_DOWN  &none
-&kp B  &kp V              &kp Z  &kp X   &kp C  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X   &kp C  &kp V  &kp B
-       &soft_off    &none  &none  &tog PAD                     &kp RIGHT_ARROW    &kp ENTER  &none  &none
-                                            &none
-            >;
-			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         m9 {
