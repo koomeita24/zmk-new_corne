@@ -484,7 +484,7 @@ layers:
   - '&soft_off'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - A
+  - SETTING
   - $$mdi:arrow-right-bold$$
   - SETTING
   - {t: '$$mdi:minus-circle-outline$$', type: none}
