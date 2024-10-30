@@ -163,11 +163,15 @@
         pad {
             display-name = "PAD";
 		    bindings = <
-&kp T  &kp R  &kp Q  &kp W  &kp E  &kp ESC      &kp UP_ARROW       &kp ESC    &kp Q  &kp W  &kp E  &kp R  &kp T
+/////////////////////////////////////////////////////////////////////////
+&kp T            &kp R  &kp Q  &kp W  &kp E  &kp ESC      &kp UP_ARROW       &kp ESC    &kp Q  &kp W  &kp E  &kp R  &kp T
+/////////////////////////////////////////////////////////////////////////
 &mo PAD_SETTING  &kp F  &kp A  &kp S  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &kp S  &kp D  &kp F  &mo PAD_SETTING
-&kp B  &kp V  &kp Z  &kp X  &kp C  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X  &kp C  &kp V  &kp B
-       &soft_off    &none  &none  &kp ENTER        &kp RIGHT_ARROW    &kp ENTER  &none  &none
-                                            &none
+/////////////////////////////////////////////////////////////////////////
+&kp B            &kp V  &kp Z  &kp X  &kp C  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X  &kp C  &kp V  &kp B
+/////////////////////////////////////////////////////////////////////////
+&soft_off  &none  &none  &kp ENTER                        &kp RIGHT_ARROW    &kp ENTER  &none  &none
+&none
             >;
 			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
