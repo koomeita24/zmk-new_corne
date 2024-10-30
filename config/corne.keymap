@@ -179,11 +179,11 @@
         pad_setting {
             display-name = "PAD_SETTING";
 		    bindings = <
-&kp T  &kp K_VOLUME_UP    &kp R  &kp W   &kp E  &kp ESC      &kp UP_ARROW       &kp ESC    &kp Q  &kp W   &kp E  &kp K_VOLUME_UP    &kp T
-&none  &kp K_VOLUME_DOWN  &kp A  &tog PAD  &kp D  &kp ENTER    &kp DOWN_ARROW     &kp ENTER  &kp A  &tog PAD  &kp D  &kp K_VOLUME_DOWN  &none
-&kp B  &kp V              &kp Z  &kp X   &kp C  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp Z  &kp X   &kp C  &kp V  &kp B
-       &soft_off    &none  &none  &tog PAD                     &kp RIGHT_ARROW    &kp ENTER  &none  &none
-                                            &none
+&none  &none  &none  &none     &none  &none    &none    &none  &none  &none     &none  &none  &none
+&none  &none  &none  &tog PAD  &none  &none    &none    &none  &none  &tog PAD  &none  &none  &none
+&none  &none  &none  &none     &none  &none    &none    &none  &none  &none     &none  &none  &none
+&none  &none  &none  &tog PAD                  &none    &tog PAD  &none  &none
+&none
             >;
 			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
