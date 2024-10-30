@@ -83,16 +83,16 @@
         setting {
             display-name = "SETTING";
             bindings = <
-&rgb_ug RGB_TOG  &soft_off     &sys_reset         &none                 &none                   &none            &mmv MOVE_UP      &none                 &none                   &none 	&sys_reset  &soft_off     &rgb_ug RGB_TOG
-
-&bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &none                 &none                   &kp LS(ENTER)    &mmv MOVE_DOWN    &none                 &none                   &kp LS(ENTER)    &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2
-
-&none           &tog PAD         &tog M9         &kp LA(LC(UP_ARROW))  &kp LA(LC(V))    &kp LA(LC(DOWN_ARROW))  &mmv MOVE_LEFT    &kp LA(LC(UP_ARROW))  &kp LA(LC(V))  &kp LA(LC(DOWN_ARROW))   &none           &tog PAD         &tog M9
-
-                 &soft_off   &none &none  &mo SETTING_H    &mmv MOVE_RIGHT &mo SETTING_H &none  &none
-				 &sys_reset
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+&rgb_ug RGB_TOG  &soft_off     &sys_reset    &none                 &kp LCTRL      &kp LALT                  &none    &kp LALT              &kp LCTRL      &none 	           &sys_reset    &soft_off     &rgb_ug RGB_TOG
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+&bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &none                 &none          &none                     &none    &none                 &none          &none                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+&none            &tog PAD      &tog M9       &kp LA(LC(UP_ARROW))  &kp LA(LC(V))  &kp LA(LC(DOWN_ARROW))    &none    &kp LA(LC(UP_ARROW))  &kp LA(LC(V))  &kp LA(LC(DOWN_ARROW))  &none         &tog PAD      &tog M9
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+&none  &none &none  &mo SETTING_H 	   								    &none    &mo SETTING_H &none  &none
+&none
             >;
-            //sensor-bindings = <&rgb_encoder>;
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
         };
 
