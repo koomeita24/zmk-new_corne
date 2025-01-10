@@ -60,8 +60,14 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        tap-ms = <10>;
+        tap-ms = <30>;
     };
+	rotate: rotate {
+		compatible = "zmk,behavior-sensor-rotate-var";
+		#sensor-binding-cells = <2>;
+		bindings = <&msc>, <&msc>;
+		tap-ms = <10>;
+	};
 
     keymap {
         compatible = "zmk,keymap";
@@ -74,8 +80,8 @@
 &mo M4  &kp V          &kp E &kp N &kp C &kp T  &none          &mmv MOVE_DOWN             &kp E &kp N &kp C &kp T &kp V  		 &mo M4
 					   &none  &none  &mo SETTING             		      	  &mo SETTING  &none  &none
             >;
-			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
-			sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rotate SCRL_DOWN SCRL_UP>;
+			//sensor-bindings = <&scroll_encoder>;
         };
 
         m2 {
