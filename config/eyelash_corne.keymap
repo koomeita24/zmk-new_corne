@@ -162,10 +162,10 @@
         m9 {
             display-name = "M9";
 		    bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T        &kp UP_ARROW       &kp Y      &kp U  &kp I  &kp O  &kp P      &kp BSPC
-&kp ESC  &kp A  &kp S  &kp D  &kp F  &kp G       &none &kp DOWN_ARROW &none    &kp H      &kp J  &kp K  &kp L  &kp ENTER  &mo M3
-&mo M9_LS     &kp Z  &kp X  &kp C  &kp V  &kp SPACE  &none  &kp LEFT_ARROW     &kp SPACE  &kp B  &kp N  &kp M  &kp LCTRL  &mo M9_RS       
-         &none  &none  &mo SETTING_1         &mo SETTING_1  &none  &none
+&kp TAB   &kp Q &kp W &kp E &kp R &kp T      			    &kp UP_ARROW       	   &kp Y     &kp U &kp I &kp O &kp P     &kp BSPC
+&kp ESC   &kp A &kp S &kp D &kp F &kp G      &kp LEFT_ARROW &none &kp RIGHT_ARROW  &kp H     &kp J &kp K &kp L &kp ENTER &mo M3
+&mo M9_LS &kp Z &kp X &kp C &kp V &kp SPACE  &none  		&kp DOWN_ARROW     	   &kp SPACE &kp B &kp N &kp M &kp LCTRL &mo M9_RS       
+         			  &none  &none  &mo SETTING_1         						   &mo SETTING_1  &none  &none
             >;
 			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
             sensor-bindings = <&scroll_encoder>;
@@ -174,9 +174,9 @@
         m9_ls {
             display-name = "M9_LS";
 		    bindings = <
-&kp BACKSLASH  &kp N7  &kp N8  &kp N9  &kp LEFT_BRACKET   &none        &kp UP_ARROW       &kp LS(Y)      &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)      &kp LS(BSPC)
-&kp LSHIFT           &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET  &none       &none &kp DOWN_ARROW &none    &kp LS(H)      &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp LS(ENTER)  &mo M3
-&none          &kp N1  &kp N2  &kp N3  &kp N0             &none       &none &kp LEFT_ARROW     &kp LS(SPACE)  &kp LS(B)  &kp LS(N)  &kp LS(M)  &kp LCTRL &kp LALT
+&kp BACKSLASH &kp N7 &kp N8 &kp N9 &kp LEFT_BRACKET  &none        	   &none        &kp LS(Y)     &kp LS(U) &kp LS(I) &kp LS(O) &kp LS(P)     &kp LS(BSPC)
+&kp LSHIFT    &kp N4 &kp N5 &kp N6 &kp RIGHT_BRACKET &none       &none &none &none  &kp LS(H)     &kp LS(J) &kp LS(K) &kp LS(L) &kp LS(ENTER) &mo M3
+&none         &kp N1 &kp N2 &kp N3 &kp N0            &none       &none &none        &kp LS(SPACE) &kp LS(B) &kp LS(N) &kp LS(M) &kp LCTRL     &kp LALT
           &none  &none  &mo SETTING   &mo SETTING  &none  &none
             >;
 			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
@@ -186,9 +186,9 @@
         m9_rs {
             display-name = "M9_RS";
 		    bindings = <
-&kp LS(TAB)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)        &kp UP_ARROW       &none  &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9  &kp BACKSLASH
-&kp LS(ESC)  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)       &none &kp DOWN_ARROW &none    &none  &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp N6  &kp LSHIFT
-&kp LALT     &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(SPACE)  &none  &kp LEFT_ARROW     &none  &kp N0             &kp N1  &kp N2  &kp N3  &none
+&kp LS(TAB)  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)        	  &none        &none  &kp LEFT_BRACKET   &kp N7 &kp N8 &kp N9 &kp BACKSLASH
+&kp LS(ESC)  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)      &none &none &none  &none  &kp RIGHT_BRACKET  &kp N4 &kp N5 &kp N6 &kp LSHIFT
+&kp LALT     &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(SPACE)  &none &none 	   &none  &kp N0             &kp N1 &kp N2 &kp N3 &none
          &none  &none  &mo SETTING   &mo SETTING  &none  &none
             >;
 			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
