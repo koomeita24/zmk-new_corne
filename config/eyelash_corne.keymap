@@ -56,12 +56,12 @@
         bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
 
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <2>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        tap-ms = <10>;
-    };
+    //scroll_encoder: scroll_encoder {
+    //    compatible = "zmk,behavior-sensor-rotate";
+    //    #sensor-binding-cells = <2>;
+    //    bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+    //    tap-ms = <10>;
+    //};
 	rot_kp: sensor_rotate_kp {
 		compatible = "zmk,behavior-sensor-rotate-var";
 		#sensor-binding-cells = <2>;
@@ -80,7 +80,7 @@
 &mo M4  &kp V          &kp E &kp N &kp C &kp T  &none          &mmv MOVE_DOWN             &kp E &kp N &kp C &kp T &kp V  		 &mo M4
 					   &none  &none  &mo SETTING             		      	  &mo SETTING  &none  &none
             >;
-			sensor-bindings = <&rot_kp LA(PAGE_DOWN) LA(PAGE_UP)>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
 			//sensor-bindings = <&scroll_encoder>;
         };
 
