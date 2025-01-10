@@ -39,6 +39,18 @@
 / {
 //    behaviors {
  //   };
+    macros {
+        go_home: go_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+				, <&macro_wait_time 100>
+                , <&macro_tap &kp ENTER>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+    };
 
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -59,9 +71,9 @@
         m1 {
             display-name = "M1";
 		    bindings = <
-&mo M5  &kp LEFT_SHIFT &kp A &kp U &kp I &kp O           &kp UP       		  &kp A &kp U &kp I &kp O &kp LEFT_SHIFT &mo M5
-&mo M3  &mo M2         &kp H &kp S &kp D &kp L  &kp LEFT &kp ENTER &kp RIGHT  &kp H &kp S &kp D &kp L &mo M2 		 &mo M3
-&mo M4  &kp V          &kp E &kp N &kp C &kp T  &none    &kp DOWN             &kp E &kp N &kp C &kp T &kp V  		 &mo M4
+&mo M5  &kp LEFT_SHIFT &kp A &kp U &kp I &kp O             	   &mmv MOVE_UP 			  &kp A &kp U &kp I &kp O &kp LEFT_SHIFT &mo M5
+&mo M3  &mo M2         &kp H &kp S &kp D &kp L  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp H &kp S &kp D &kp L &mo M2 		 &mo M3
+&mo M4  &kp V          &kp E &kp N &kp C &kp T  &none          &mmv MOVE_DOWN             &kp E &kp N &kp C &kp T &kp V  		 &mo M4
 					   &none  &none  &mo SETTING             		      	  &mo SETTING  &none  &none
             >;
 			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
@@ -71,9 +83,9 @@
         m2 {
             display-name = "M2";
             bindings = <
-&mo M5 &kp LEFT_SHIFT &kp Q &kp W &kp R &kp P           	  &mmv MOVE_UP 				 &kp Q &kp W &kp R &kp P &kp LEFT_SHIFT &mo M5
-&mo M3 &none          &kp Y &kp J &kp K &kp F  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp Y &kp J &kp K &kp F &none 		    &mo M3
-&mo M4 &kp G          &kp B &kp X &kp M &kp Z  &none          &mmv MOVE_DOWN             &kp B &kp X &kp M &kp Z &kp G          &mo M4
+&mo M5 &kp LEFT_SHIFT &kp Q &kp W &kp R &kp P           &kp UP       		 &kp Q &kp W &kp R &kp P &kp LEFT_SHIFT &mo M5
+&mo M3 &none          &kp Y &kp J &kp K &kp F  &kp LEFT &kp ENTER &kp RIGHT  &kp Y &kp J &kp K &kp F &none 		    &mo M3
+&mo M4 &kp G          &kp B &kp X &kp M &kp Z  &none    &kp DOWN             &kp B &kp X &kp M &kp Z &kp G          &mo M4
 					  &none  &none  &mo SETTING             						 	 &mo SETTING  &none  &none
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -104,9 +116,9 @@
         m5 {
             display-name = "M5";
             bindings = <
-&none          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp LC(R)  &kp HOME 				&mmv MOVE_UP    		   &none        &kp LC(R)  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &none
-&kp LG(D)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(A)  &kp END   &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none        &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(ENTER)
-&kp LS(ENTER)  &kp K_BACK      &kp LC(V)       &kp LC(C)	&none          &none 	 &none 			&mmv MOVE_DOWN             &none        &none      &kp LC(C)       &kp LC(V)       &kp K_BACK       &kp LS(ENTER)
+&none         &kp PAGE_UP    &kp UP_ARROW   &kp PAGE_DOWN   &kp LC(R)  &msc SCRL_UP   				  &mmv MOVE_UP    		     &none        &kp LC(R)  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &none
+&go_home      &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp LC(A)  &msc SCRL_DOWN  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none        &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(ENTER)
+&kp LS(ENTER) &kp K_BACK     &kp LC(V)      &kp LC(C)		&kp HOME   &kp END         &none 		  &mmv MOVE_DOWN             &none        &none      &kp LC(C)       &kp LC(V)       &kp K_BACK       &kp LS(ENTER)
 										  &none  &none  &mo SETTING                                                    		   &mo SETTING  &none  &none
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -126,9 +138,9 @@
         setting_h {
             display-name = "SETTING_H";
             bindings = <
-&soft_off &bootloader &sys_reset &out OUT_TOG &bt BT_CLR &none 		  &none        &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_SPI &none &none &none
+&bootloader &soft_off &sys_reset &out OUT_TOG &bt BT_CLR &none 		  &none        &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_SPI &none &none &bootloader
 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 						&none &none &none  &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-&none &tog PAD &tog M9 &none &none &none  						&none &none    	   &none &studio_unlock &msc SCRL_DOWN &msc SCRL_UP &kp LG(TAB) &kp LG(ENTER)
+&none &tog PAD &tog M9 &none &none &none  						&none &none    	   &none &studio_unlock &none &none &none &none
 								&none &none  &none              &none &none &none
             >;
             sensor-bindings = <&rgb_encoder>;
