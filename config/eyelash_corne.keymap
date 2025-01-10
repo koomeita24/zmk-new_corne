@@ -65,7 +65,7 @@
         m1 {
             display-name = "M1";
 		    bindings = <
-&mo M5  &td0    &kp A  &kp U  &kp I  &kp O           &kp UP       		  &kp A  &kp U  &kp I  &kp O  &td0    &mo M5
+&mo M5  &kp LEFT_SHIFT    &kp A  &kp U  &kp I  &kp O           &kp UP       		  &kp A  &kp U  &kp I  &kp O  &kp LEFT_SHIFT    &mo M5
 &mo M3  &mo M2  &kp H  &kp S  &kp D  &kp L  &kp LEFT &kp ENTER &kp RIGHT  &kp H  &kp S  &kp D  &kp L  &mo M2  &mo M3
 &mo M4  &kp V   &kp E  &kp N  &kp C  &kp T  &none    &kp DOWN             &kp E  &kp N  &kp C  &kp T  &kp V   &mo M4
 					   &none  &none  &mo SETTING             		      &mo SETTING  &none  &none
@@ -77,7 +77,7 @@
         m2 {
             display-name = "M2";
             bindings = <
-&mo M5  &td0   &kp Q  &kp W  &kp R  &kp P           	  &mmv MOVE_UP 				 &kp Q  &kp W  &kp R  &kp P  &td0   &mo M5
+&mo M5  &kp LEFT_SHIFT   &kp Q  &kp W  &kp R  &kp P           	  &mmv MOVE_UP 				 &kp Q  &kp W  &kp R  &kp P  &kp LEFT_SHIFT   &mo M5
 &mo M3  &none  &kp Y  &kp J  &kp K  &kp F  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp Y  &kp J  &kp K  &kp F  &none  &mo M3
 &mo M4  &kp G  &kp B  &kp X  &kp M  &kp Z  &none          &mmv MOVE_DOWN             &kp B  &kp X  &kp M  &kp Z  &kp G  &mo M4
 					  &none  &none  &mo SETTING             						 &mo SETTING  &none  &none
@@ -90,7 +90,7 @@
             bindings = <
 &kp GRAVE  &kp BSPC   &kp MINUS   &kp EQUAL  &kp SLASH       &none 				   &mmv MOVE_UP 			  &none  &kp GRAVE       &kp MINUS  &kp EQUAL   &kp BSPC   &kp SLASH
 &none      &kp ESC    &kp SPACE   &kp ENTER  &kp TAB  	     &none  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none  &kp TAB         &kp ESC    &kp SPACE   &kp ENTER  &none
-&td0       &kp COMMA  &kp PERIOD  &kp SEMI   &kp APOSTROPHE  &none  &none          &mmv MOVE_DOWN             &none  &kp APOSTROPHE  &kp COMMA  &kp PERIOD  &kp SEMI   &td0
+&kp LEFT_SHIFT       &kp COMMA  &kp PERIOD  &kp SEMI   &kp APOSTROPHE  &none  &none          &mmv MOVE_DOWN             &none  &kp APOSTROPHE  &kp COMMA  &kp PERIOD  &kp SEMI   &kp LEFT_SHIFT
 								  &none  &none  &mo SETTING     			      					  		  &mo SETTING  &none  &none
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -100,7 +100,7 @@
             display-name = "M4";
             bindings = <
 &kp BACKSLASH  &kp N7  &kp N8  &kp N9  &kp LEFT_BRACKET   &none 				&mmv MOVE_UP 	   	       &none  &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9  &kp BACKSLASH
-&td0           &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET  &none  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none  &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp N6  &td0
+&kp LEFT_SHIFT           &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET  &none  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none  &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp N6  &kp LEFT_SHIFT
 &none          &kp N1  &kp N2  &kp N3  &kp N0             &none  &none			&mmv MOVE_DOWN             &none  &kp N0             &kp N1  &kp N2  &kp N3  &none
 							   &none  &none  &mo SETTING                      	   						   &mo SETTING  &none  &none
             >;
