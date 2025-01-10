@@ -59,10 +59,10 @@
         m1 {
             display-name = "M1";
 		    bindings = <
-&mo M5  &kp LEFT_SHIFT    &kp A  &kp U  &kp I  &kp O           &kp UP       		  &kp A  &kp U  &kp I  &kp O  &kp LEFT_SHIFT    &mo M5
-&mo M3  &mo M2  &kp H  &kp S  &kp D  &kp L  &kp LEFT &kp ENTER &kp RIGHT  &kp H  &kp S  &kp D  &kp L  &mo M2  &mo M3
-&mo M4  &kp V   &kp E  &kp N  &kp C  &kp T  &none    &kp DOWN             &kp E  &kp N  &kp C  &kp T  &kp V   &mo M4
-					   &none  &none  &mo SETTING             		      &mo SETTING  &none  &none
+&mo M5  &kp LEFT_SHIFT &kp A &kp U &kp I &kp O           &kp UP       		  &kp A &kp U &kp I &kp O &kp LEFT_SHIFT &mo M5
+&mo M3  &mo M2         &kp H &kp S &kp D &kp L  &kp LEFT &kp ENTER &kp RIGHT  &kp H &kp S &kp D &kp L &mo M2 		 &mo M3
+&mo M4  &kp V          &kp E &kp N &kp C &kp T  &none    &kp DOWN             &kp E &kp N &kp C &kp T &kp V  		 &mo M4
+					   &none  &none  &mo SETTING             		      	  &mo SETTING  &none  &none
             >;
 			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
 			sensor-bindings = <&scroll_encoder>;
@@ -71,10 +71,10 @@
         m2 {
             display-name = "M2";
             bindings = <
-&mo M5  &kp LEFT_SHIFT   &kp Q  &kp W  &kp R  &kp P           	  &mmv MOVE_UP 				 &kp Q  &kp W  &kp R  &kp P  &kp LEFT_SHIFT   &mo M5
-&mo M3  &none  &kp Y  &kp J  &kp K  &kp F  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp Y  &kp J  &kp K  &kp F  &none  &mo M3
-&mo M4  &kp G  &kp B  &kp X  &kp M  &kp Z  &none          &mmv MOVE_DOWN             &kp B  &kp X  &kp M  &kp Z  &kp G  &mo M4
-					  &none  &none  &mo SETTING             						 &mo SETTING  &none  &none
+&mo M5 &kp LEFT_SHIFT &kp Q &kp W &kp R &kp P           	  &mmv MOVE_UP 				 &kp Q &kp W &kp R &kp P &kp LEFT_SHIFT &mo M5
+&mo M3 &none          &kp Y &kp J &kp K &kp F  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp Y &kp J &kp K &kp F &none 		    &mo M3
+&mo M4 &kp G          &kp B &kp X &kp M &kp Z  &none          &mmv MOVE_DOWN             &kp B &kp X &kp M &kp Z &kp G          &mo M4
+					  &none  &none  &mo SETTING             						 	 &mo SETTING  &none  &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -82,10 +82,10 @@
         m3 {
             display-name = "M3";
             bindings = <
-&kp GRAVE  &kp BSPC   &kp MINUS   &kp EQUAL  &kp SLASH       &none 				   &mmv MOVE_UP 			  &none  &kp GRAVE       &kp MINUS  &kp EQUAL   &kp BSPC   &kp SLASH
-&none      &kp ESC    &kp SPACE   &kp ENTER  &kp TAB  	     &none  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none  &kp TAB         &kp ESC    &kp SPACE   &kp ENTER  &none
-&kp LEFT_SHIFT       &kp COMMA  &kp PERIOD  &kp SEMI   &kp APOSTROPHE  &none  &none          &mmv MOVE_DOWN             &none  &kp APOSTROPHE  &kp COMMA  &kp PERIOD  &kp SEMI   &kp LEFT_SHIFT
-								  &none  &none  &mo SETTING     			      					  		  &mo SETTING  &none  &none
+&kp GRAVE 	   &kp BSPC  &kp MINUS  &kp EQUAL &kp SLASH      &none 				   &mmv MOVE_UP 			  &none &kp GRAVE      &kp MINUS &kp EQUAL  &kp BSPC  &kp SLASH
+&none     	   &kp ESC   &kp SPACE  &kp ENTER &kp TAB  	     &none  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none &kp TAB        &kp ESC   &kp SPACE  &kp ENTER &none
+&kp LEFT_SHIFT &kp COMMA &kp PERIOD &kp SEMI  &kp APOSTROPHE &none  &none          &mmv MOVE_DOWN             &none &kp APOSTROPHE &kp COMMA &kp PERIOD &kp SEMI  &kp LEFT_SHIFT
+								    &none  &none  &mo SETTING     			      					  		  &mo SETTING  &none  &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -94,7 +94,7 @@
             display-name = "M4";
             bindings = <
 &kp BACKSLASH  &kp N7  &kp N8  &kp N9  &kp LEFT_BRACKET   &none 				&mmv MOVE_UP 	   	       &none  &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9  &kp BACKSLASH
-&kp LEFT_SHIFT           &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET  &none  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none  &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp N6  &kp LEFT_SHIFT
+&kp LEFT_SHIFT &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET  &none  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none  &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp N6  &kp LEFT_SHIFT
 &none          &kp N1  &kp N2  &kp N3  &kp N0             &none  &none			&mmv MOVE_DOWN             &none  &kp N0             &kp N1  &kp N2  &kp N3  &none
 							   &none  &none  &mo SETTING                      	   						   &mo SETTING  &none  &none
             >;
@@ -128,7 +128,7 @@
             bindings = <
 &soft_off &bootloader &sys_reset &out OUT_TOG &bt BT_CLR &none 		  &none        &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_SPI &none &none &none
 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 						&none &none &none  &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-&none &tog PAD &tog M9 &none &none &none  						&none &none    	   &none &none &msc SCRL_DOWN &msc SCRL_UP &kp LG(TAB) &kp LG(ENTER)
+&none &tog PAD &tog M9 &none &none &none  						&none &none    	   &none &studio_unlock &msc SCRL_DOWN &msc SCRL_UP &kp LG(TAB) &kp LG(ENTER)
 								&none &none  &none              &none &none &none
             >;
             sensor-bindings = <&rgb_encoder>;
@@ -163,10 +163,9 @@
             display-name = "M9";
 		    bindings = <
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T        &kp UP_ARROW       &kp Y      &kp U  &kp I  &kp O  &kp P      &kp BSPC
-&kp ESC  &kp A  &kp S  &kp D  &kp F  &kp G        &kp DOWN_ARROW     &kp H      &kp J  &kp K  &kp L  &kp ENTER  &mo M3
-&mo M9_LS     &kp Z  &kp X  &kp C  &kp V  &kp SPACE    &kp LEFT_ARROW     &kp SPACE  &kp B  &kp N  &kp M  &kp LCTRL  &mo M9_RS       
-         &soft_off    &none  &none  &mo SETTING_1         &kp RIGHT_ARROW    &mo SETTING_1  &none  &none
-                                                  &none
+&kp ESC  &kp A  &kp S  &kp D  &kp F  &kp G       &none &kp DOWN_ARROW &none    &kp H      &kp J  &kp K  &kp L  &kp ENTER  &mo M3
+&mo M9_LS     &kp Z  &kp X  &kp C  &kp V  &kp SPACE  &none  &kp LEFT_ARROW     &kp SPACE  &kp B  &kp N  &kp M  &kp LCTRL  &mo M9_RS       
+         &none  &none  &mo SETTING_1         &mo SETTING_1  &none  &none
             >;
 			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
             sensor-bindings = <&scroll_encoder>;
