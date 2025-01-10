@@ -56,16 +56,16 @@
         bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
 
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        tap-ms = <30>;
-    };
-	rotate: rotate {
+    //scroll_encoder: scroll_encoder {
+    //    compatible = "zmk,behavior-sensor-rotate";
+    //    #sensor-binding-cells = <2>;
+    //    bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+    //    tap-ms = <10>;
+    //};
+	rot_kp: sensor_rotate_kp {
 		compatible = "zmk,behavior-sensor-rotate-var";
 		#sensor-binding-cells = <2>;
-		bindings = <&msc>, <&msc>;
+		bindings = <&kp>, <&kp>;
 		tap-ms = <10>;
 	};
 
@@ -80,7 +80,7 @@
 &mo M4  &kp V          &kp E &kp N &kp C &kp T  &none          &mmv MOVE_DOWN             &kp E &kp N &kp C &kp T &kp V  		 &mo M4
 					   &none  &none  &mo SETTING             		      	  &mo SETTING  &none  &none
             >;
-			sensor-bindings = <&rotate SCRL_DOWN SCRL_UP>;
+			sensor-bindings = <&rot_kp LALT(PAGE_DOWN) LALT(PAGE_UP)>;
 			//sensor-bindings = <&scroll_encoder>;
         };
 
@@ -92,7 +92,7 @@
 &mo M4 &kp G          &kp B &kp X &kp M &kp Z  &none    &kp DOWN             &kp B &kp X &kp M &kp Z &kp G          &mo M4
 					  &none  &none  &mo SETTING             						 	 &mo SETTING  &none  &none
             >;
-            sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         m3 {
@@ -103,7 +103,7 @@
 &kp LEFT_SHIFT &kp COMMA &kp PERIOD &kp SEMI  &kp APOSTROPHE &none  &none          &mmv MOVE_DOWN             &none &kp APOSTROPHE &kp COMMA &kp PERIOD &kp SEMI  &kp LEFT_SHIFT
 								    &none  &none  &mo SETTING     			      					  		  &mo SETTING  &none  &none
             >;
-            sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         m4 {
@@ -114,7 +114,7 @@
 &none          &kp N1  &kp N2  &kp N3  &kp N0             &none  &none			&mmv MOVE_DOWN             &none  &kp N0             &kp N1  &kp N2  &kp N3  &none
 							   &none  &none  &mo SETTING                      	   						   &mo SETTING  &none  &none
             >;
-            sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         m5 {
@@ -125,7 +125,7 @@
 &kp LS(ENTER) &kp K_BACK     &kp LC(V)      &kp LC(C)		&kp HOME   &kp END         &none 		  &mmv MOVE_DOWN             &kp HOME   &kp END      &kp LC(C)       &kp LC(V)       &kp K_BACK       &kp LS(ENTER)
 										  &none  &none  &mo SETTING                                                    		   &mo SETTING  &none  &none
             >;
-            sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         setting {
@@ -158,8 +158,7 @@
 &kp B           &kp V &kp Z  &kp X &kp C &kp SPACE  &none &none    	   &kp SPACE &kp Z &kp X  &kp C &kp V &kp B
 							   &none  &none  &kp ENTER                       &kp ENTER  &none  &none
             >;
-			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
-            sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         pad_setting {
@@ -171,8 +170,7 @@
 					 &none  &none  &none                     	&none  &none  &none
 &none
             >;
-			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
-            sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         m9 {
@@ -183,8 +181,7 @@
 &mo M9_LS &kp Z &kp X &kp C &kp V &kp SPACE  &none  		&kp DOWN_ARROW     	   &kp SPACE &kp B &kp N &kp M &kp LCTRL &mo M9_RS       
          			  &none  &none  &mo SETTING_1         						   &mo SETTING_1  &none  &none
             >;
-			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
-            sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         m9_ls {
@@ -195,8 +192,7 @@
 &none         &kp N1 &kp N2 &kp N3 &kp N0            &none       &none &none        &kp LS(SPACE) &kp LS(B) &kp LS(N) &kp LS(M) &kp LCTRL     &kp LALT
           &none  &none  &mo SETTING   &mo SETTING  &none  &none
             >;
-			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
-            sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         m9_rs {
@@ -207,8 +203,7 @@
 &kp LALT     &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(SPACE)  &none &none 	   &none  &kp N0             &kp N1 &kp N2 &kp N3 &none
          &none  &none  &mo SETTING   &mo SETTING  &none  &none
             >;
-			//sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
-            sensor-bindings = <&scroll_encoder>;
+			sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
         };
 
         setting_1 {
