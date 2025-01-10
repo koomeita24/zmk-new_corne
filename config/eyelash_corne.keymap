@@ -121,7 +121,7 @@
         setting {
             display-name = "SETTING";
             bindings = <
-&none 		 &none        &none   	   &kp LGUI &kp LCTRL &kp LALT        &none    	   &kp LALT &kp LCTRL &LGUI &none        &none        &none
+&none 		 &none        &none   	   &kp LGUI &kp LCTRL &kp LALT        &none    	   &kp LALT &kp LCTRL &kp LGUI &none        &none        &none
 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none    &none     &none     &none &none &none  &none    &none     &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
 &none        &tog PAD     &tog M9      &none    &none 	  &none     &none &none    	   &none    &none     &none &none        &tog PAD     &tog M9
 										  &none &none  &mo SETTING_H 	   						     &mo SETTING_H &none  &none
