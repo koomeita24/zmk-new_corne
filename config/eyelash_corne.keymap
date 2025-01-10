@@ -78,7 +78,7 @@
             display-name = "M2";
             bindings = <
 &mo M5  &td0   &kp Q  &kp W  &kp R  &kp P           	  &mmv MOVE_UP 				 &kp Q  &kp W  &kp R  &kp P  &td0   &mo M5
-&mo M3  &none  &kp Y  &kp J  &kp K  &kp F  &mmv MOVE_LEFT &mmv LCLK &mmv MOVE_RIGHT  &kp Y  &kp J  &kp K  &kp F  &none  &mo M3
+&mo M3  &none  &kp Y  &kp J  &kp K  &kp F  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp Y  &kp J  &kp K  &kp F  &none  &mo M3
 &mo M4  &kp G  &kp B  &kp X  &kp M  &kp Z  $none          &mmv MOVE_DOWN             &kp B  &kp X  &kp M  &kp Z  &kp G  &mo M4
 					  &none  &none  &mo SETTING             						 &mo SETTING  &none  &none
             >;
@@ -89,7 +89,7 @@
             display-name = "M3";
             bindings = <
 &kp GRAVE  &kp BSPC   &kp MINUS   &kp EQUAL  &kp SLASH       &none 				   &mmv MOVE_UP 			  &none  &kp GRAVE       &kp MINUS  &kp EQUAL   &kp BSPC   &kp SLASH
-&none      &kp ESC    &kp SPACE   &kp ENTER  &kp TAB  	     &none  &mmv MOVE_LEFT &mmv LCLK &mmv MOVE_RIGHT  &none  &kp TAB         &kp ESC    &kp SPACE   &kp ENTER  &none
+&none      &kp ESC    &kp SPACE   &kp ENTER  &kp TAB  	     &none  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none  &kp TAB         &kp ESC    &kp SPACE   &kp ENTER  &none
 &td0       &kp COMMA  &kp PERIOD  &kp SEMI   &kp APOSTROPHE  &none  &none          &mmv MOVE_DOWN             &none  &kp APOSTROPHE  &kp COMMA  &kp PERIOD  &kp SEMI   &td0
 								  &none  &none  &mo SETTING     			      					  		  &mo SETTING  &none  &none
             >;
@@ -100,7 +100,7 @@
             display-name = "M4";
             bindings = <
 &kp BACKSLASH  &kp N7  &kp N8  &kp N9  &kp LEFT_BRACKET   &none 				&mmv MOVE_UP 	   	       &none  &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9  &kp BACKSLASH
-&td0           &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET  &none  &mmv MOVE_LEFT &mmv LCLK &mmv MOVE_RIGHT  &none  &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp N6  &td0
+&td0           &kp N4  &kp N5  &kp N6  &kp RIGHT_BRACKET  &none  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none  &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp N6  &td0
 &none          &kp N1  &kp N2  &kp N3  &kp N0             &none  &none			&mmv MOVE_DOWN             &none  &kp N0             &kp N1  &kp N2  &kp N3  &none
 							   &none  &none  &mo SETTING                      	   						   &mo SETTING  &none  &none
             >;
@@ -111,7 +111,7 @@
             display-name = "M5";
             bindings = <
 &none          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp LC(R)  &kp HOME 				&mmv MOVE_UP    		   &none        &kp LC(R)  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &none
-&kp LG(ENTER)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(A)  &kp end   &mmv MOVE_LEFT &mmv LCLK &mmv MOVE_RIGHT  &none        &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(ENTER)
+&kp LG(ENTER)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(A)  &kp end   &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none        &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(ENTER)
 &kp LS(ENTER)  &kp K_BACK      &kp LC(V)       &kp LC(C)	&none          &none 	 &none 			&mmv MOVE_DOWN             &none        &none      &kp LC(C)       &kp LC(V)       &kp K_BACK       &kp LS(ENTER)
 										  &none  &none  &mo SETTING                                                    		   &mo SETTING  &none  &none
             >;
