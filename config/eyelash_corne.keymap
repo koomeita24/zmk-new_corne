@@ -79,7 +79,7 @@
             bindings = <
 &mo M5  &td0   &kp Q  &kp W  &kp R  &kp P           	  &mmv MOVE_UP 				 &kp Q  &kp W  &kp R  &kp P  &td0   &mo M5
 &mo M3  &none  &kp Y  &kp J  &kp K  &kp F  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp Y  &kp J  &kp K  &kp F  &none  &mo M3
-&mo M4  &kp G  &kp B  &kp X  &kp M  &kp Z  $none          &mmv MOVE_DOWN             &kp B  &kp X  &kp M  &kp Z  &kp G  &mo M4
+&mo M4  &kp G  &kp B  &kp X  &kp M  &kp Z  &none          &mmv MOVE_DOWN             &kp B  &kp X  &kp M  &kp Z  &kp G  &mo M4
 					  &none  &none  &mo SETTING             						 &mo SETTING  &none  &none
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -111,7 +111,7 @@
             display-name = "M5";
             bindings = <
 &none          &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp LC(R)  &kp HOME 				&mmv MOVE_UP    		   &none        &kp LC(R)  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &none
-&kp LG(ENTER)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(A)  &kp end   &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none        &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(ENTER)
+&kp LG(D)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(A)  &kp end   &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none        &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(ENTER)
 &kp LS(ENTER)  &kp K_BACK      &kp LC(V)       &kp LC(C)	&none          &none 	 &none 			&mmv MOVE_DOWN             &none        &none      &kp LC(C)       &kp LC(V)       &kp K_BACK       &kp LS(ENTER)
 										  &none  &none  &mo SETTING                                                    		   &mo SETTING  &none  &none
             >;
@@ -134,7 +134,7 @@
             bindings = <
 &soft_off &bootloader &sys_reset &out OUT_TOG &bt BT_CLR &none 		  &none        &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_SPI &none &none &none
 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 						&none &none &none  &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-&none &tog PAD &tog M9 &none &none &none  						&none &none    	   &none &none &none &none &none &none
+&none &tog PAD &tog M9 &none &none &none  						&none &none    	   &none &none &none &none &kp LG(TAB) &kp LG(ENTER)
 								&none &none  &none              &none &none &none
             >;
             sensor-bindings = <&rgb_encoder>;
